@@ -2,9 +2,9 @@
   "name": "patient-service",
   "version": "1.0.0",
   "description": "Simple Patient Service API",
-  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "dependencies": {
     "express": "^4.18.2"

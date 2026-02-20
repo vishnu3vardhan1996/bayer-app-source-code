@@ -18,9 +18,8 @@ USER node
 
 COPY --chown=node:node --from=base /app/build ./build
 
-
 # Expose port
 EXPOSE 3000
 
 # Start application
-CMD ["node", "app.js"]
+CMD ["npx", "serve", "-s", "build"]
