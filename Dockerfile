@@ -22,4 +22,4 @@ COPY --chown=node:node --from=base /app .
 EXPOSE 3000
 
 # Start application
-CMD ["npm", "start"]
+CMD ["node", "app.js"]
