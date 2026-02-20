@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY ./package*.json ./
 
-RUN npm ci
+RUN npm install --production
 
 COPY . .
 
@@ -17,7 +17,6 @@ WORKDIR /app
 USER node
 
 COPY --chown=node:node --from=base /app/build ./build
-
 
 # Expose port
 EXPOSE 3000
