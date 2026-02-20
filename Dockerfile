@@ -8,7 +8,7 @@ RUN npm ci
 
 COPY . .
 
-RUN npm run build
+# RUN npm run build
 
 FROM node:18.15.0-alpine
 
@@ -16,10 +16,10 @@ WORKDIR /app
 
 USER node
 
-COPY --chown=node:node --from=base /app/build ./build
+COPY --chown=node:node --from=base /app .
 
 # Expose port
 EXPOSE 3000
 
 # Start application
-CMD ["npx", "serve", "-s", "build"]
+CMD ["npm", "start"]
